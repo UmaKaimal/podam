@@ -7,7 +7,7 @@
      - target
  test: 
     override: 
-        - mvn clean install -U
+        - mvn clean install -X
  post: 
    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
    - find . -type f -regex ".*/target/failsafe-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \; 
